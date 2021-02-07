@@ -6,7 +6,7 @@ class Solution {
     fun reverse(x: Int): Int = if (x > 0) {
         reverseInteger(x)
     } else {
-        reverseInteger(kotlin.math.abs(x)) * -1
+        -reverseInteger(-x)
     }
 
     private fun reverseInteger(x: Int): Int = x.toString().reversed().toIntOrNull() ?: 0
